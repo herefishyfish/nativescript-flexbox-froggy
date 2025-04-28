@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+H1 {
+  @apply text-3xl font-bold;
+}
+
+p {
+  @apply bg-red-50 p-2 m-2;
+}
+
+span {
+  @apply bg-blue-500;
+}
+
+code {
+  @apply bg-green-100;
+}
+
+li {
+  @apply list-disc list-inside;
+}

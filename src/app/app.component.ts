@@ -1,9 +1,13 @@
-import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import { PageRouterOutlet } from '@nativescript/angular';
+import { Component, NO_ERRORS_SCHEMA } from "@angular/core";
+import { PageRouterOutlet } from "@nativescript/angular";
 
 @Component({
-  selector: 'ns-app',
-  templateUrl: './app.component.html',
+  selector: "ns-app",
+  template: `
+    <GridLayout>
+      <page-router-outlet></page-router-outlet>
+    </GridLayout>
+  `,
   imports: [PageRouterOutlet],
   schemas: [NO_ERRORS_SCHEMA],
 })
