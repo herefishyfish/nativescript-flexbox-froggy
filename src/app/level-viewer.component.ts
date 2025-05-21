@@ -11,29 +11,33 @@ import {
 @Component({
   selector: "app-level-viewer",
   template: `
-    <!-- <Label> {{ level().instructions["en"] }} </Label> -->
-
-    <div class="instructions" [innerView]="level().instructions['en']"></div>
-
-    <div class="editor">
-      <textfield [(ngModel)]="cssCode"></textfield>
-      <!-- <textarea
-        rows="6"
-        [(ngModel)]="cssCode"
-        placeholder="Write your flex CSS here…"
-      >
-      </textarea> -->
-    </div>
-
-    <div>
-      <app-board [board]="level().board" [styles]="parseStyles()"> </app-board>
+    <div class="flex flex-col flex-grow flex-wrap w-full h-full">
+      <!-- <div class="flex mb-1 flex-shrink" [innerView]="level().instructions['en']"></div> -->
+  
+      <div class="editor">
+        <textfield [(ngModel)]="cssCode" (ngModelChange)="onChange()"></textfield>
+      </div>
+  
+      <app-board class="flex flex-grow flex-wrap flex-col w-full h-full" [board]="level().board" [styles]="parseStyles()"> </app-board>
     </div>
   `,
   styles: [
     `
+      .host {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        // flex-direction: column;
+        padding: 10;
+        gap: 2;
+      }
+
       .instructions {
         margin-bottom: 1rem;
       }
+
       .editor textarea {
         width: 100%;
         font-family: monospace;
@@ -66,6 +70,10 @@ export class LevelViewerComponent implements OnChanges {
       .map(([k, v]) => `  ${k}: ${v};`)
       .join("\n");
     this.cssCode = `${level.before}${props}\n${level.after}`;
+  }
+
+  onChange() {
+    
   }
 
   // optional: parse user-edited CSS into a key/value map

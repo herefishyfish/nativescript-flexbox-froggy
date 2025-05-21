@@ -1,82 +1,53 @@
-import {View, Text} from '@triniwiz/nativescript-masonkit';
-import { registerElement } from '@nativescript/angular';
-import { CSSType } from '@nativescript/core';
+import { View, Text } from "@triniwiz/nativescript-masonkit";
+import {
+  Article,
+  Aside,
+  B,
+  Blockquote,
+  Code,
+  Div,
+  Footer,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  Header,
+  Li,
+  Main,
+  Nav,
+  P,
+  Section,
+  Span,
+  Ul,
+} from "@triniwiz/nativescript-masonkit/web";
+import { Img } from "@triniwiz/nativescript-masonkit";
+import { registerElement } from "@nativescript/angular";
 
-registerElement('View', () => View);
-registerElement('Text', () => Text);
+registerElement("Img", () => Img);
+registerElement("img", () => Img);
+registerElement("View", () => View);
+registerElement("Text", () => Text);
+registerElement("article", () => Article);
 
-@CSSType('div')
-export class Div extends View {}
-registerElement('div', () => Div);
-
-@CSSType('section')
-export class Section extends View {}
-registerElement('section', () => Section);
-
-@CSSType('header')
-export class Header extends View {}
-registerElement('header', () => Header);
-
-@CSSType('footer')
-export class Footer extends View {}
-registerElement('footer', () => Footer);
-
-@CSSType('article')
-export class Article extends View {}
-registerElement('article', () => Article);
-
-@CSSType('main')
-export class Main extends View {}
-registerElement('main', () => Main);
-
-@CSSType('nav')
-export class Nav extends View {}
-registerElement('nav', () => Nav);
-
-@CSSType('aside')
-export class Aside extends View {}
-registerElement('aside', () => Aside);
-
-@CSSType('span')
-export class Span extends Text {}
-registerElement('span', () => Span);
-
-@CSSType('code')
-export class Code extends Text {}
-registerElement('code', () => Code);
-
-@CSSType('h1')
-export class H1 extends Text {}
-registerElement('h1', () => H1);
-
-@CSSType('h2')
-export class H2 extends Text {}
-registerElement('h2', () => H2);
-
-@CSSType('h3')
-export class H3 extends Text {}
-registerElement('h3', () => H3);
-
-@CSSType('h4')
-export class H4 extends Text {}
-registerElement('h4', () => H4);
-
-@CSSType('h5')
-export class H5 extends Text {}
-registerElement('h5', () => H5);
-
-@CSSType('h6')
-export class H6 extends Text {}
-registerElement('h6', () => H6);
-
-@CSSType('p')
-export class P extends Text {}
-registerElement('p', () => P);
-
-@CSSType('ul')
-export class Ul extends View {}
-registerElement('ul', () => Ul);
-
-@CSSType('li')
-export class Li extends Text {}
-registerElement('li', () => Li);
+registerElement("aside", () => Aside);
+registerElement("b", () => B);
+registerElement("blockquote", () => Blockquote);
+registerElement("div", () => Div);
+registerElement("section", () => Section);
+registerElement("header", () => Header);
+registerElement("footer", () => Footer);
+registerElement("main", () => Main);
+registerElement("nav", () => Nav);
+registerElement("span", () => Span);
+registerElement("code", () => Code);
+registerElement("h1", () => H1);
+registerElement("h2", () => H2);
+registerElement("h3", () => H3);
+registerElement("h4", () => H4);
+registerElement("h5", () => H5);
+registerElement("h6", () => H6);
+registerElement("p", () => P);
+registerElement("ul", () => Ul);
+registerElement("li", () => Li);

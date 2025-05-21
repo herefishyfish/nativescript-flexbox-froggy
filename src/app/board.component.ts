@@ -13,14 +13,13 @@ registerElement("app-board", () => BoardComponent);
   selector: "app-board",
   template: `
     <!-- frogs are flex-items -->
-    <div id="pond" [ngStyle]="styles" class="pond">
+    <div [ngStyle]="styles" class="pond">
       @for(clr of frogs; track clr) {
-      <app-frog [frog]="clr"></app-frog>
+        <app-frog [frog]="clr" />
       }
       <div class="pads">
         @for(clr of frogs; track clr; let i = $index) {
-        <app-lily-pad [pad]="clr" [style.left.%]="(i / (frogs.length - 1)) * 10">
-        </app-lily-pad>
+          <app-lily-pad [pad]="clr" [style.left.%]="(i / (frogs.length - 1)) * 80" />
         }
       </div>
     </div>
@@ -29,19 +28,27 @@ registerElement("app-board", () => BoardComponent);
   `,
   styles: [
     `
+      :host {
+        display: flex;
+        height: 400;
+        width: 100%;
+        min-height: 400;
+      }
+
       .pond {
         position: relative;
         width: 100%;
-        height: 400;
-        margin: auto;
+        height: 100%;
+        min-height: 400;
         border: 2px solid #4a7;
-        background: #acf;
+        background-color: #acf;
         display: flex;
         /* default flex-start if no styles applied */
       }
+
       .pads {
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -55,6 +62,12 @@ export class BoardComponent extends View {
   @Input() styles: { [k: string]: any } = {};
   // board = input<string>(""); 
   // styles = input<{ [k: string]: any }>({});
+
+  // boardView = inject(View) // Assuming 'View' is the correct dependency to inject
+
+  // ngOnChanges() {
+  //   const board: View = this.boardView;
+  // }
 
   get frogs(): string[] {
     // always one frog per pad

@@ -8,12 +8,12 @@ registerElement("app-lily-pad", () => LilyPadComponent);
 @CSSType("app-lily-pad")
 @Component({
   selector: "app-lily-pad",
-  template: ` <Image [src]="src" class="pad" /> `,
+  template: ` <Image [src]="src" width="80" height="80" class="pad" /> `,
   styles: [
     `
       :host {
         position: absolute;
-        bottom: 0;
+        top: 1;
         width: 80;
         height: 80;
         transform: translateX(0%);

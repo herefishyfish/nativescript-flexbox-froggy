@@ -5,7 +5,7 @@ import {
   input,
   ViewContainerRef,
 } from "@angular/core";
-import { Div, Span, H1, H2, H3, H4, H5, H6, Li, P, Ul } from "../../masonkit";
+import { Div, Span, H1, H2, H3, H4, H5, H6, Li, P, Ul } from "@triniwiz/nativescript-masonkit/web";
 import { Text, View } from "@triniwiz/nativescript-masonkit";
 import { Image } from "@nativescript/core";
 

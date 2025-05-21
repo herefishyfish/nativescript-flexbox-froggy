@@ -13,16 +13,18 @@ import { LevelViewerComponent } from "./level-viewer.component";
 @Component({
   selector: "app-game",
   template: `
-    <div class="game">
-      <h1>Flexbox Game</h1>
-
-      <app-level-selector
-        [levels]="levels"
-        [currentIndex]="currentIndex"
-        (selectLevel)="select($event)"
-      />
-
-      <app-level-viewer [level]="level()" />
+    <div class="game flex flex-col flex-grow flex-wrap">
+      <div class="">
+        <h1>Flexbox Game</h1>
+  
+        <!-- <app-level-selector
+          [levels]="levels"
+          [currentIndex]="currentIndex"
+          (selectLevel)="select($event)"
+        /> -->
+  
+        <app-level-viewer class="w-full" [level]="level()" />
+      </div>
 
       <div class="controls">
         <button (tap)="prev()" [disabled]="currentIndex() === 0">← Prev</button>
@@ -38,8 +40,9 @@ import { LevelViewerComponent } from "./level-viewer.component";
   styles: [
     `
       .game {
+        display: flex;
         margin: auto;
-        font-family: sans-serif;
+        flex-direction: column;
       }
       .controls {
         text-align: center;

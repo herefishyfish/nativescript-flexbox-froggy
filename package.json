@@ -14,7 +14,7 @@
     "@angular/router": "~19.2.0",
     "@nativescript/angular": "^19.0.0",
     "@nativescript/core": "~8.9.0",
-    "@triniwiz/nativescript-masonkit": "^1.0.0-alpha.14",
+    "@triniwiz/nativescript-masonkit": "^1.0.0-alpha.21",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
   },
