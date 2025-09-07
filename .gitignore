@@ -3,6 +3,9 @@ hooks/
 node_modules/
 platforms/
 
+# ignore masonkit local package
+# nativescript-masonkit/
+
 # Logs
 logs
 *.log

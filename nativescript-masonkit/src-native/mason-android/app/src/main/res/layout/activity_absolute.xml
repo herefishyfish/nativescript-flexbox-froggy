@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.nativescript.mason.masonkit.View xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:mason="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/blue"
+  tools:context=".AbsoluteActivity">
+
+
+ <!-- <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Test" />
+
+
+  <TextView
+    android:id="@+id/top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    android:text="Top Left"
+    android:textColor="@color/white"
+    mason:mason_insetLeft="0dp"
+    mason:mason_insetTop="0dp"
+    mason:mason_position="absolute" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    android:text="Top Right"
+    android:textColor="@color/white"
+    mason:mason_insetRight="0dp"
+    mason:mason_insetTop="0dp"
+    mason:mason_position="absolute" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    android:text="Bottom Left"
+    android:textColor="@color/white"
+    mason:mason_insetBottom="0dp"
+    mason:mason_insetLeft="0dp"
+    mason:mason_position="absolute" />
+
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    android:text="Bottom Right"
+    android:textColor="@color/white"
+    mason:mason_insetBottom="0dp"
+    mason:mason_insetRight="0dp"
+    mason:mason_position="absolute" />
+  -->
+
+</org.nativescript.mason.masonkit.View>

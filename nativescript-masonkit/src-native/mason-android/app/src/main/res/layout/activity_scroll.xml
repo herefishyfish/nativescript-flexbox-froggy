@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.nativescript.mason.masonkit.View xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:mason="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/scrollViewParent"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ScrollActivity">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <org.nativescript.mason.masonkit.View
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      mason:mason_flexDirection="column">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="First" />
+
+    </org.nativescript.mason.masonkit.View>
+
+  </ScrollView>
+
+
+</org.nativescript.mason.masonkit.View>
